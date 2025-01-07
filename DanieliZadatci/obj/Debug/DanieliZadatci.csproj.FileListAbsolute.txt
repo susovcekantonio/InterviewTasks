@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\DanieliZadatci\bin\Debug\DanieliZadatci.exe.config
+C:\Users\Admin\source\repos\DanieliZadatci\bin\Debug\DanieliZadatci.exe
+C:\Users\Admin\source\repos\DanieliZadatci\bin\Debug\DanieliZadatci.pdb
+C:\Users\Admin\source\repos\DanieliZadatci\obj\Debug\DanieliZadatci.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\DanieliZadatci\obj\Debug\DanieliZadatci.Form1.resources
+C:\Users\Admin\source\repos\DanieliZadatci\obj\Debug\DanieliZadatci.Form2.resources
+C:\Users\Admin\source\repos\DanieliZadatci\obj\Debug\DanieliZadatci.Form3.resources
+C:\Users\Admin\source\repos\DanieliZadatci\obj\Debug\DanieliZadatci.Properties.Resources.resources
+C:\Users\Admin\source\repos\DanieliZadatci\obj\Debug\DanieliZadatci.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\DanieliZadatci\obj\Debug\DanieliZadatci.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\DanieliZadatci\obj\Debug\DanieliZadatci.exe
+C:\Users\Admin\source\repos\DanieliZadatci\obj\Debug\DanieliZadatci.pdb

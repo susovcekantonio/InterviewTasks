@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\DrvceASCII\bin\Debug\DrvceASCII.exe.config
+C:\Users\Admin\source\repos\DrvceASCII\bin\Debug\DrvceASCII.exe
+C:\Users\Admin\source\repos\DrvceASCII\bin\Debug\DrvceASCII.pdb
+C:\Users\Admin\source\repos\DrvceASCII\obj\Debug\DrvceASCII.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\DrvceASCII\obj\Debug\DrvceASCII.Form1.resources
+C:\Users\Admin\source\repos\DrvceASCII\obj\Debug\DrvceASCII.Properties.Resources.resources
+C:\Users\Admin\source\repos\DrvceASCII\obj\Debug\DrvceASCII.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\DrvceASCII\obj\Debug\DrvceASCII.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\DrvceASCII\obj\Debug\DrvceASCII.exe
+C:\Users\Admin\source\repos\DrvceASCII\obj\Debug\DrvceASCII.pdb
+C:\Users\Admin\source\repos\DrvceASCII\obj\Debug\DrvceASCII.Form2.resources
+C:\Users\Admin\source\repos\DrvceASCII\obj\Debug\DrvceASCII.Form3.resources

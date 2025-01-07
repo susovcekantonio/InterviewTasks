@@ -1,0 +1,105 @@
+﻿//Postavka baze, zadatci 1 i 2
+
+CREATE DATABASE VideoStore
+
+CREATE TABLE Members (
+    member_id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    address VARCHAR(255),
+    contact VARCHAR(255),
+    join_date DATE,
+    status VARCHAR(255) 
+);
+
+CREATE TABLE Movies (
+    movie_id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    genre VARCHAR(255),
+    year INT,
+    status VARCHAR(255)
+);
+
+CREATE TABLE Rentals (
+    rental_id SERIAL PRIMARY KEY,
+    member_id INT,
+    movie_id INT,
+	rental_date DATE,
+    FOREIGN KEY (member_id) REFERENCES Members(member_id),
+    FOREIGN KEY (movie_id) REFERENCES Movies(movie_id)
+);
+
+CREATE TABLE Rentals_history (
+	history_id SERIAL PRIMARY KEY,
+	member_id INT,
+    movie_id INT,
+    rental_date DATE,
+    return_date DATE,
+	FOREIGN KEY (member_id) REFERENCES Members(member_id),
+    FOREIGN KEY (movie_id) REFERENCES Movies(movie_id)
+);
+
+INSERT INTO Members (name, address, contact, join_date, status)
+VALUES 
+    ('Ana Kovačević', 'Ilica 45, Zagreb', '091-123-4567', '2023-03-15', 'frequent'),
+    ('Marko Horvat', 'Savska 10, Zagreb', '098-765-4321', '2022-12-01', 'frequent'),
+    ('Ivana Marin', 'Trg Bana Jelačića 15, Zagreb', '092-333-4444', '2024-01-20', 'rarely'),
+    ('Petar Petrović', 'Petrinjska 30, Zagreb', '097-555-6666', '2023-07-05', 'frequent'),
+    ('Lucija Novak', 'Vukovarska 22, Zagreb', '095-111-2222', '2023-08-10', 'rarely');
+
+INSERT INTO Movies (name, genre, year, status)
+VALUES 
+    ('The Dark Knight', 'Action', 2008, 'available'),
+    ('The Godfather', 'Classic', 1972, 'available'),
+    ('Pulp Fiction', 'Action', 1994, 'borrowed'),
+    ('Gone with the Wind', 'Classic', 1939, 'available'),
+    ('Inception', 'Action', 2010, 'available'),
+    ('Casablanca', 'Classic', 1942, 'borrowed'),
+    ('The Matrix', 'Action', 1999, 'available'),
+    ('Schindler’s List', 'Classic', 1993, 'available'),
+    ('Gladiator', 'Action', 2000, 'available'),
+    ('Citizen Kane', 'Classic', 1941, 'borrowed');
+
+INSERT INTO Rentals (member_id, movie_id, rental_date)
+VALUES 
+    (1, 3, '2024-10-01'),  
+    (2, 1, '2024-10-05'),  
+    (3, 6, '2024-09-25'),  
+    (4, 2, '2024-10-10'),  
+    (5, 10, '2024-10-15'), 
+    (2, 5, '2024-10-18');
+
+//Zadatak 3
+a)
+SELECT *
+FROM movies
+WHERE genre='Action'
+
+b)
+SELECT *
+FROM movies
+WHERE genre='Action' AND status='borrowed';
+
+c)
+UPDATE movies
+SET genre='Classic'
+WHERE year<1980;
+
+d)
+INSERT INTO Rentals_history (member_id, movie_id, rental_date, return_date)
+SELECT member_id, movie_id, rental_date, CURRENT_DATE
+FROM rentals
+WHERE rental_id = 1;
+
+DELETE 
+FROM rentals
+WHERE rental_id = 1; 
+
+e)
+UPDATE Members
+SET status = 'frequent'
+WHERE member_id IN (
+    SELECT member_id
+    FROM rentals_history
+    GROUP BY member_id
+    HAVING COUNT(*) > 0
+);
